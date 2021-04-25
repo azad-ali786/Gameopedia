@@ -4,6 +4,7 @@ import {loadGames} from "../actions/gameAction"
 import Game from '../components/Game'
 import styled from 'styled-components'
 import {motion} from "framer-motion"
+import GameDetail from "../components/GameDetail";
 const Home = () => {
     //FEtch Games for
     const dispatch = useDispatch();
@@ -15,6 +16,7 @@ const Home = () => {
     console.log(upcoming);
     return(
         <GameList>
+           <GameDetail />
             <h2>Upcoming games</h2>
             <Games>
             { upcoming && (

@@ -39,3 +39,8 @@ const getCurrentMonth = () => {
   export const upcomingGamesURL = () => `${base_url}${upcoming_games}`;
   export const newGamesURL = () => `${base_url}${newGames}`;
 
+  //Game details 
+  export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}?${game_id}&${key_url}`;
+//Screenshots
+export const gameScreenshotURL = (game_id) =>
+   `${base_url}games/${game_id}/screenshots?${key_url}`;
