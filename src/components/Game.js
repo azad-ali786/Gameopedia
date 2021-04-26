@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import styled from 'styled-components'
 import {motion} from "framer-motion"
+import {Link} from "react-router-dom"
 //Redux
 import {useDispatch} from 'react-redux'
 import {loadDetails} from '../actions/detailAction'
@@ -11,9 +12,11 @@ const Game =({name,released,image,id})=> {
   };
     return (
         <StyledGame  onClick={loadDetailHandler}>
+          <Link to={`/game/${id}`}>
             <h3>{name}</h3>
             <h3>{released}</h3>
             <img src={image} alt={name}/>
+            </Link>
             </StyledGame>
     )
 };
