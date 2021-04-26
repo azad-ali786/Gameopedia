@@ -11,10 +11,12 @@ const initialState = {
           ...state,
           game: action.payload.game,
           screen: action.payload.screen,
+          isLoading: false,
         };
        case "LOADING_DETAIL":
          return {
-           ...state,isLoading:true
+           ...state,
+           isLoading:true
          };
       default:
         return { ...state };

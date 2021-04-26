@@ -8,6 +8,7 @@ import {loadDetails} from '../actions/detailAction'
 const Game =({name,released,image,id})=> {
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
+    document.body.style.overflow = "hidden";
     dispatch(loadDetails(id));
   };
     return (
