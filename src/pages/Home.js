@@ -17,13 +17,13 @@ const Home = () => {
     },[dispatch]);
     //Getting data from initState
     const {popular,newGames,upcoming} = useSelector(state => state.games);
-    console.log(upcoming);
     return(
         <GameList>
            { pathId && <GameDetail /> }
             <h2>Upcoming games</h2>
             <Games>
             { upcoming && (
+              
                     upcoming.map((game) => (       
                            <Game name={game.name} released={game.released} id={game.id} key={game.id} image={game.background_image}/>
                         ) )
